@@ -1,0 +1,41 @@
+#!/bin/bash
+
+MINICONDA_INSTALLER_DOWNLOAD_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+MINICONDA_INSTALLER_FILE=miniconda-installer.sh
+MINICONDA_INSTALLER_FILE_SHA256="1ea2f885b4dbc3098662845560bc64271eb17085387a70c2ba3f29fff6f8d52f"
+
+clear
+echo ""
+if [[ -f ${MINICONDA_INSTALLER_FILE} ]]; then
+	echo "Found Miniconda installer file..."
+else
+	echo "Downloading Miniconda installer file..."
+	echo ""
+	wget -O ${MINICONDA_INSTALLER_FILE} ${MINICONDA_INSTALLER_DOWNLOAD_URL}
+	if [[ $? == 0 ]]; then
+		echo ""
+		echo "Downloaded Miniconda installer successfully."
+	else
+		echo ""
+		echo "Failed to downloaded Miniconda installer."
+		echo "Aborting Docker image build."
+		echo ""
+		exit 1
+	fi
+	echo ""
+fi
+echo "Checking integrity of Miniconda installer file..."
+echo "${MINICONDA_INSTALLER_FILE_SHA256} ${MINICONDA_INSTALLER_FILE}" | sha256sum --check --status
+if [[ $? == 0 ]]; then
+	echo "Miniconda installer file integrity check succeeded."
+	echo "Building Docker image..."
+else
+	echo "Miniconda installer file integrity check failed."
+	echo "Aborting Docker image build."
+	echo ""
+	exit 1
+fi
+
+docker build -t aldrin/qiskit .
+
+#::END::
