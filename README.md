@@ -39,5 +39,5 @@ services:
 
 Access Jupyter console using the following URL:
 ```
-http://localhost:888/lab?token=qiskit
+http://localhost:8888/lab?token=qiskit
 ```
