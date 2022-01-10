@@ -36,6 +36,6 @@ else
 	exit 1
 fi
 
-docker build -t aldrin/qiskit .
+docker build -t aldrinebaroi/qiskit .
 
 #::END::
