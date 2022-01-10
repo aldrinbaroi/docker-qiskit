@@ -35,3 +35,9 @@ services:
     ports:
       - 8888:8888
 ```
+
+
+Access Jupyter console using the following URL:
+```
+http://localhost:888/lab?token=qiskit
+```
