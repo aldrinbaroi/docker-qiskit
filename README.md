@@ -8,7 +8,7 @@ All available **Qiskit** application areas are included:
 4. Nature
 5. Optimization
 
-The following additional **Jupyter** extensions are included besides ones included by Qiskit installer:
+The following additional **Jupyter** extensions are included besides the ones included by Qiskit installer:
 1. LSP - Language Server Protocol
 2. Draw.io / Diagrams.net
 3. Git
