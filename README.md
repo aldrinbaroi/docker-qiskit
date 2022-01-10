@@ -17,4 +17,21 @@ The following **Jupyter** externsions are included:
 6. System Monitor
 7. Spreadsheet Editor
 
-  
+## How to use
+
+### Docker command line:
+
+```
+docker run -p 8888:8888 aldrinebaroi/qiskit
+```
+
+### Docker Compose:
+
+```
+version: "3"
+services:
+  qiskit:
+    image: aldrinebaroi/qiskit
+    ports:
+      - 8888:8888
+```
