@@ -8,7 +8,7 @@ All available **Qiskit** application areas are included:
 4. Nature
 5. Optimization
 
-The following **Jupyter** externsions are included:
+The following additional **Jupyter** externsions are included besides ones included by Qiskit installer:
 1. LSP - Language Server Protocol
 2. Draw.io / Diagrams.net
 3. Git
@@ -16,6 +16,7 @@ The following **Jupyter** externsions are included:
 5. Variable Inspector
 6. System Monitor
 7. Spreadsheet Editor
+8. Plotly
 
 ## How to use
 
