@@ -1,4 +1,4 @@
-# Qiskit
+# Docker Qiskit
 Builds docker image for Qiskit
 
 All available **Qiskit** application areas are included:
